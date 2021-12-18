@@ -1,0 +1,41 @@
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema;
+
+const HeroSchema = new Schema({
+abilities: [],
+agi_base: {type:Schema.Types.Number},
+agi_gain:  {type:Schema.Types.Number},
+armor:{type:Schema.Types.Number},
+attack_capability: {type:Schema.Types.Number},
+attack_range: {type:Schema.Types.Number},
+attack_rate:{type:Schema.Types.Number},
+bio_loc: {type:Schema.Types.String},
+complexity: {type:Schema.Types.Number},
+damage_max:{type:Schema.Types.Number},
+damage_min: {type:Schema.Types.Number},
+health_regen: {type:Schema.Types.Number},
+hype_loc: {type:Schema.Types.String},
+_id:{type:Schema.Types.Number},
+int_base: {type:Schema.Types.Number},
+int_gain: {type:Schema.Types.Number},
+magic_resistance: {type:Schema.Types.Number},
+mana_regen: {type:Schema.Types.Number},
+max_health: {type:Schema.Types.Number},
+max_mana: {type:Schema.Types.Number},
+movement_speed: {type:Schema.Types.Number},
+name: {type:Schema.Types.String},
+name_loc: {type:Schema.Types.String},
+npe_desc_loc: {type:Schema.Types.String},
+order_id: {type:Schema.Types.Number},
+primary_attr: {type:Schema.Types.Number},
+projectile_speed:{type:Schema.Types.Number},
+role_levels: [Schema.Types.Number],
+sight_range_day: {type:Schema.Types.Number},
+sight_range_night: {type:Schema.Types.Number},
+str_base: {type:Schema.Types.Number},
+str_gain: {type:Schema.Types.Number},
+talents: [],
+turn_rate:{type:Schema.Types.Number},
+  });
+  
+  module.exports = mongoose.model("hero", HeroSchema);
